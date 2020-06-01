@@ -22,11 +22,11 @@ for (int i = 1; i <= N; i++){
 
 for (int t = 0; t < int(M) + 1; t++){
 
-        int k = 0;   
+        int k = 0;                // флаг для печати только одного t в файл
 
         for (int x = 0; x < int(N) + 1; x++){
 
-            T_next[x] = tau*D / (h*h) * T_cur[x+1] + (1 - 2*tau*D / ((h*h))) * T_cur[x] + tau*D / ((h*h)) * T_cur[x - 1]; 
+            T_next[x] = tau*D / (h*h) * T_cur[x+1] + (1 - 2*tau*D / ((h*h))) * T_cur[x] + tau*D / ((h*h)) * T_cur[x - 1]; // вычисление Т
 
             if (t == 0){
 
